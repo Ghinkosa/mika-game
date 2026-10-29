@@ -28,7 +28,6 @@ function getGeminiClient() {
   if (!aiInstance) {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-      console.warn("⚠️ GEMINI_API_KEY is not defined in environment variables.");
       return null;
     }
     aiInstance = new GoogleGenAI({
